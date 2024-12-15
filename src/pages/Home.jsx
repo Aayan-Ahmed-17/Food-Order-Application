@@ -42,7 +42,7 @@ const Home = () => {
   return listOfRestaurant.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="">
+    <div className="min-h-screen">
       <div className="">
         <div className="">
           <input
@@ -82,7 +82,7 @@ const Home = () => {
           Top Rated Restaurants
         </button>
       </div>
-      <div className="">
+      <div className="h-full grid grid-cols-12 p-4 gap-3">
         {filteredRestaurant.map((restaurant) => (
           <RestaurantCard key={restaurant.info.id} resData={restaurant} />
         ))}
