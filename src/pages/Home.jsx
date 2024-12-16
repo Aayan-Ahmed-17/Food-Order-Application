@@ -2,6 +2,7 @@ import RestaurantCard from "../components/RestaurantCard";
 import { useEffect, useState } from "react";
 import { MENU_API } from "../utilis/constants";
 import TopRes from "../components/Sections/TopRes";
+import OnlineDeliveryRes from "../components/Sections/OnlineDeliveryRes";
 
 // definition of state react variable
 // ! Whenever state variable updates, react triggers a reconciliation cycle (re-renders the component)
@@ -24,10 +25,11 @@ const Home = () => {
   //     json?.data?.cards[0]?.card?.card?.imageGridCards?.info
   //   )
   // };
-
+  
   return (
     <>
       <TopRes />
+      <OnlineDeliveryRes />
     </>
   )
   // listOfRestaurant.length > 0 &&(
