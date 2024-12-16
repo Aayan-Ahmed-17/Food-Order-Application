@@ -19,6 +19,12 @@ const OnlineDeliveryRes = () => {
   return (
     <div>
       <h1>{listOfRestaurant?.cards?.[2]?.card?.card?.title}</h1>
+      <ul>
+        {listOfRestaurant?.cards?.[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+        .map(restaurant =>
+          <li key={restaurant.info.id}>{restaurant.info.name}</li>
+        )}
+      </ul>
     </div>
   )
 }
