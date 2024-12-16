@@ -11,7 +11,7 @@ const OnlineDeliveryRes = () => {
     const fetchData = async () => {
       const res = await fetch(MENU_API);
       const json = await res.json();
-        console.log(json?.data?.cards[2]?.card?.card?.title)
+        console.log(json?.data?.cards[4]?.card?.card)
       setlistOfRestaurant(
         json?.data
       )
