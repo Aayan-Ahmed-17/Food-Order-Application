@@ -10,28 +10,10 @@ import Navbar from "../components/Navbar";
 // ! Whenever state variable updates, react triggers a reconciliation cycle (re-renders the component)
 
 const Home = () => {
-  // const [listOfRestaurant, setlistOfRestaurant] = useState([]);
-
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
-
-  // const fetchData = async () => {
-  //   const res = await fetch(MENU_API);
-  //   const json = await res.json();
-
-  //   console.log(
-  //     json?.data?.cards[0]?.card?.card
-  //   );
-  //   setlistOfRestaurant(
-  //     json?.data?.cards[0]?.card?.card?.imageGridCards?.info
-  //   )
-  // };
   
   return (
     <>
       <Navbar />
-      <Brief />
       <TopRes />
       <OnlineDeliveryRes />
     </>
