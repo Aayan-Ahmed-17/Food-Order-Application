@@ -20,10 +20,10 @@ const OnlineDeliveryRes = () => {
   return (
     <div>
       <h1>{listOfRestaurant?.cards?.[2]?.card?.card?.title}</h1>
-      <ul>
+      <ul className='grid grid-cols-12 gap-3'>
         {listOfRestaurant?.cards?.[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
         .map(restaurant =>
-          <li key={restaurant.info.id}>
+          <li key={restaurant.info.id} className='col-span-3 border border-black'>
             <Card src={restaurant?.info?.cloudinaryImageId}/>
           </li>
         )}

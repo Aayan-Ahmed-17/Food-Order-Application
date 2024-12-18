@@ -30,10 +30,10 @@ const TopRes = () => {
             <button>-&gt;</button>
           </div>
         </header>
-        <ul>
+        <ul className="grid grid-cols-12 gap-3">
           {listOfRestaurant?.gridElements?.infoWithStyle?.restaurants.map(
             (restaurant) => (
-              <li key={restaurant.info.id}>
+              <li key={restaurant.info.id} className="col-span-3 border-black border">
                 <Card src={restaurant.info.cloudinaryImageId}/>
               </li>
             )
