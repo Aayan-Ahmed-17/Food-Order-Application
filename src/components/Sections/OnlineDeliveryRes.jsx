@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { MENU_API } from '../../utilis/constants';
+import Card from '../Card';
 
 const OnlineDeliveryRes = () => {
     const [listOfRestaurant, setlistOfRestaurant] = useState([]);
@@ -22,7 +23,9 @@ const OnlineDeliveryRes = () => {
       <ul>
         {listOfRestaurant?.cards?.[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
         .map(restaurant =>
-          <li key={restaurant.info.id}>{restaurant.info.name}</li>
+          <li key={restaurant.info.id}>
+            <Card src={restaurant?.info?.cloudinaryImageId}/>
+          </li>
         )}
       </ul>
     </div>
