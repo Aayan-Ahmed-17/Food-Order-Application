@@ -19,12 +19,12 @@ const OnlineDeliveryRes = () => {
     <section className="size-full">
       <div className="w-4/5 mx-auto">
         <h1>{listOfRestaurant?.cards?.[2]?.card?.card?.title}</h1>
-        <div className="grid xl:grid-cols-12 md:grid-cols-9 sm:grid-cols-7 grid-cols-3 gap-3">
+        <div className="grid lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-2">
           {listOfRestaurant?.cards?.[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants.map(
             (restaurant) => (
               <div
                 key={restaurant.info.id}
-                className="md:col-span-3 sm:col-span-3 col-span-3"
+                className="col-span-1"
               >
                 <Card src={restaurant?.info?.cloudinaryImageId} />
               </div>
