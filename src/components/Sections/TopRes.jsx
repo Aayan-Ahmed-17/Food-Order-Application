@@ -18,7 +18,7 @@ const TopRes = () => {
   };
 
   return (
-    <section className="size-auto">
+    <section className="container">
       <div className="w-4/5 mx-auto">
         <header className="flex justify-between items-center py-2 mx-auto bg-purple-500">
           <h1 className="text-lg font-bold tracking-tight">
