@@ -7,8 +7,8 @@ const Navbar = () => {
       className="
       h-16 px-4 bg-white shadow-sm
       sm:h-18 sm:px-6
-      md:h-20 md:px-8
-      lg:h-24 lg:px-12"
+      md:h-[85px] md:px-8
+      lg:px-12"
     >
       {/* Logo */}
       <div className="h-full flex items-center justify-between max-w-[1300px] mx-auto">
