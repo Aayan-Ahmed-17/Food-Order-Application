@@ -12,9 +12,9 @@ const Brief = () => {
     const res = await fetch(MENU_API);
     const json = await res.json();
 
-    console.log(
-      json?.data?.cards[0]?.card?.card
-    );
+    // console.log(
+    //   json?.data?.cards[0]?.card?.card
+    // );
     setlistOfRestaurant(
       json?.data?.cards[0]?.card?.card
     )

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { MENU_API } from "../utilis/constants";
 
-const useFetchData = () => {
+const useFetchAllData = () => {
   const [states, setStates] = useState({
     data: null,
     isLoading: true,
@@ -13,7 +13,11 @@ const useFetchData = () => {
       try {
         const res = await fetch(MENU_API);
         const data = await res.json();
-        setStates((prev) => ({ ...prev, data, isLoading: false }));
+        setStates((prev) => ({
+          ...prev,
+          data: data?.data?.cards,
+          isLoading: false,
+        }));
       } catch (err) {
         setStates((prev) => ({ ...prev, isError: err, isLoading: false }));
       }
@@ -24,4 +28,4 @@ const useFetchData = () => {
   return states;
 };
 
-export default useFetchData;
+export default useFetchAllData;
