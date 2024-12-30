@@ -6,6 +6,7 @@ import OnlineDeliveryRes from "../components/Sections/OnlineDeliveryRes";
 import Brief from "../components/Sections/Brief";
 import Navbar from "../components/Navbar";
 import HorizontalScroll from "../components/Sections/HorizontalScroll";
+import Temp from "../components/Sections/Temp";
 
 // definition of state react variable
 // ! Whenever state variable updates, react triggers a reconciliation cycle (re-renders the component)
@@ -19,6 +20,7 @@ const Home = () => {
       {/* <TopRes />
       <OnlineDeliveryRes /> */}
       <HorizontalScroll />
+      <Temp />
       
     </>
   )
