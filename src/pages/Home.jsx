@@ -25,11 +25,10 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <Brief />
+      <Brief menu={menu}/>
       {/* <TopRes />
       <OnlineDeliveryRes /> */}
       <HorizontalScroll />
-      {/* <Temp /> */}
       
     </>
   )
