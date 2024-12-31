@@ -36,7 +36,13 @@ import React, { useEffect, useState } from "react";
 import { MENU_API } from "../utilis/constants";
 
 const useFetchAllData = () => {
-  const [states, setStates] = useState({
+  const [allData, setAllData] = useState({
+    data: null,
+    isLoading: true,
+    isError: false,
+  });
+  
+  const [menu, setMenu] = useState({
     data: null,
     isLoading: true,
     isError: false,
@@ -47,13 +53,13 @@ const useFetchAllData = () => {
       try {
         const res = await fetch(MENU_API);
         const json = await res.json();
-        setStates({
+        setAllData({
           data: json?.data?.cards,
           isLoading: false,
           isError: false,
         });
       } catch (err) {
-        setStates({
+        setAllData({
           data: null,
           isError: err,
           isLoading: false,
@@ -64,6 +70,7 @@ const useFetchAllData = () => {
     fetchData();
   }, []);
   
-  return states;
+  return allData;
 };
+
 export default useFetchAllData;

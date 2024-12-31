@@ -1,22 +1,27 @@
 import RestaurantCard from "../components/RestaurantCard";
 import { useEffect, useState } from "react";
-import { MENU_API } from "../utilis/constants";
 import TopRes from "../components/Sections/TopRes";
 import OnlineDeliveryRes from "../components/Sections/OnlineDeliveryRes";
 import Brief from "../components/Sections/Brief";
 import Navbar from "../components/Navbar";
 import HorizontalScroll from "../components/Sections/HorizontalScroll";
-import Temp from "../components/Sections/Temp";
 import useFetchAllData from "../hooks/useFetchAllData";
-import useFetchRestaurants from "../hooks/useFetchRestaurants";
+// import useFetchRestaurants from "../hooks/useFetchRestaurants";
 
 // definition of state react variable
 // ! Whenever state variable updates, react triggers a reconciliation cycle (re-renders the component)
 
 const Home = () => {
   const {data, isLoading, isError} = useFetchAllData()
+  const menu = data?.filter(
+    (e) =>
+      e.card?.card?.["@type"] ===
+      "type.googleapis.com/swiggy.gandalf.widgets.v2.GridWidget"
+  );
   
-  
+  console.log(menu)
+  console.log(data)
+
   return (
     <>
       <Navbar />
@@ -24,7 +29,7 @@ const Home = () => {
       {/* <TopRes />
       <OnlineDeliveryRes /> */}
       <HorizontalScroll />
-      <Temp />
+      {/* <Temp /> */}
       
     </>
   )
