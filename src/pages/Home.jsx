@@ -28,7 +28,7 @@ const Home = () => {
       <Brief menu={menu}/>
       {/* <TopRes />
       <OnlineDeliveryRes /> */}
-      <HorizontalScroll />
+      {/* <HorizontalScroll /> */}
       
     </>
   )
