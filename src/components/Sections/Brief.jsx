@@ -9,7 +9,7 @@ const Brief = ({ menu }) => {
   ];
 
   return (
-    <div className="contain h-[255px]">
+    <div className={`lg:w-[80%] lg:mx-auto h-[255px] border-b pb- box-content`}>
       <div className="cont-header flex w-full justify-between items-center py-2 px-4">
         <h2 className="cont-heading font-bold text-2xl tracking-tight inline-block">
           {title && title}

@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav
       className="
-      h-16 px-4 bg-white shadow-sm
+      h-16 px-4 bg-white shadow-[0_15px_40px_-20px_rgba(40,44,63,.15)]
       sm:h-18 sm:px-6
       md:h-[85px] md:px-8
       lg:px-12"
