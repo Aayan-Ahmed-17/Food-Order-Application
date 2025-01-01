@@ -12,26 +12,28 @@ import useFetchAllData from "../hooks/useFetchAllData";
 // ! Whenever state variable updates, react triggers a reconciliation cycle (re-renders the component)
 
 const Home = () => {
-  const {data, isLoading, isError} = useFetchAllData()
+  const { data, isLoading, isError } = useFetchAllData();
   const menu = data?.filter(
     (e) =>
       e.card?.card?.["@type"] ===
       "type.googleapis.com/swiggy.gandalf.widgets.v2.GridWidget"
   );
-  
-  console.log(menu)
-  console.log(data)
+
+  console.log(menu);
+  console.log(data);
 
   return (
     <>
       <Navbar />
-      <Brief menu={menu}/>
-      {/* <TopRes />
+      <main className="flex flex-col size-full md:w-[90%] lg:w-[75%] md:mx-auto">
+        <Brief menu={menu} />
+        <hr className="border my-8"/>
+        {/* <TopRes />
       <OnlineDeliveryRes /> */}
-      {/* <HorizontalScroll /> */}
-      
+        {/* <HorizontalScroll /> */}
+      </main>
     </>
-  )
+  );
   // listOfRestaurant.length > 0 &&(
 
   //   <div className="min-h-screen">
@@ -41,8 +43,6 @@ const Home = () => {
   //       ))}
   //     </div>
   //   </div>
-  
-
 };
 
 export default Home;
